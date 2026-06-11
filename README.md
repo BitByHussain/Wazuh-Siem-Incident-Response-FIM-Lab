@@ -7,6 +7,7 @@ Automated Threat Detection, FIM, and Incident Response with Wazuh SIEM on viruta
 
 This project involves setting up a Wazuh SIEM lab on virtual machines, deploying a centralized security manager and an endpoint monitoring agent. The goal of this project is to detect unauthorized system changes using File Integrity Monitoring, integrate VirusTotal to catch malicious files, and set up automated scripts to stop attacks immediately.
 
+----
 ## Tools Used
 
 * Wazuh SIEM Platform: Centralized security manager and endpoint agent used for log collection, monitoring, and alerting.
@@ -14,6 +15,7 @@ This project involves setting up a Wazuh SIEM lab on virtual machines, deploying
 * VMware: The virtualization platform (hypervisor) used to host and run the lab environment virtual machines.
 * Bash Shell: Used to create the custom script for automatic file removal on the Linux agent.
 
+----
 ## Project Steps
 
 ### 1. Lab Deployment & Agent Registration:
@@ -31,3 +33,7 @@ This project involves setting up a Wazuh SIEM lab on virtual machines, deploying
 ### 4. Active Response Automation:
 * Activated the Active Response capabilities within the Wazuh ecosystem.
 * Implemented a custom script to automatically contain and mitigate threats on the endpoint immediately after a rule triggers.
+----
+## Key Findings
+
+<img width="600" height="auto" alt="Fuji-san" src="https://github.com/user-attachments/assets/41c33f34-0e0c-48a3-9c5d-832341caffc5" />
