@@ -55,6 +55,18 @@ To provide visual evidence and clarity, here are screenshots from the Wazuh mana
 * Configuring File Integrity Monitoring (FIM) on the Wazuh Agent.
 <img width="650" height="auto" alt="file intigrity" src="https://github.com/user-attachments/assets/e0b49cb6-de45-4fbe-818a-9b34cde3e709" />
 
-*Wazuh event dashboard displaying an alert for a file added to the monitored /tmp/malware directory, confirming the File Integrity Monitoring setup.
+* Wazuh event dashboard displaying an alert for a file added to the monitored /tmp/malware directory, confirming the File Integrity Monitoring setup.
+<p>
 <img width="650" height="auto" alt="file detection" src="https://github.com/user-attachments/assets/59d97cd6-d4a5-484a-9daf-2765e98e2ea3" />
+</p>
 
+* Configuring VirusTotal Integration in the Wazuh Manager.
+  <p>
+    <img width="650" height="auto" alt="virus total setup" src="https://github.com/user-attachments/assets/90ddae92-1adf-4a0e-89b1-74674f413bbb" />
+  </p>
+  
+* Simulating a Threat Using the EICAR Test File to Verify VirusTotal Integration
+  <p>
+  <img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/2fb9d726-7fe4-451b-bb1a-e0ea7e30e86d" />
+  <img width="650" height="auto" alt="virus total detection" src="https://github.com/user-attachments/assets/522fa160-f7bf-4663-bc1c-db26a78a0139" />
+  </p>
