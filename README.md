@@ -35,5 +35,26 @@ This project involves setting up a Wazuh SIEM lab on virtual machines, deploying
 * Implemented a custom script to automatically contain and mitigate threats on the endpoint immediately after a rule triggers.
 ----
 ## Key Findings
+* Real-Time Modification Alerts: Every time an unauthorized file change or creation occurred in the monitored directories, the Wazuh Server instantly caught it and generated a high-severity alert.
 
-<img width="600" height="auto" alt="Fuji-san" src="https://github.com/user-attachments/assets/41c33f34-0e0c-48a3-9c5d-832341caffc5" />
+* Automated Malware Detection: When a malicious test file was introduced to the endpoint, the VirusTotal integration successfully extracted its hash, cross-referenced it with global threat data, and automatically flagged it as malware.
+
+* Instant Incident Mitigation: Within seconds of the malware detection alert firing, the custom Active Response script triggered automatically on the endpoint. It successfully isolated or removed the threat, proving that the system can contain attacks instantly without waiting for a manual analyst intervention.
+
+----
+## Screenshots
+To provide visual evidence and clarity, here are screenshots from the Wazuh manager demonstrating the lab configuration, key results, and detection findings.
+
+
+* Initial Agent Deployment Setup.
+<p aligment="center">
+<img width="650" height="auto" alt="create agent" src="https://github.com/user-attachments/assets/9f95b007-ec6e-4bd1-bb35-2456ca80d53d" />
+<img width="650" height="auto" alt="agent" src="https://github.com/user-attachments/assets/e6a060a6-d1a3-46ff-9763-3f2f34c97291" />
+</p>
+
+* Configuring File Integrity Monitoring (FIM) on the Wazuh Agent.
+<img width="650" height="auto" alt="file intigrity" src="https://github.com/user-attachments/assets/e0b49cb6-de45-4fbe-818a-9b34cde3e709" />
+
+*Wazuh event dashboard displaying an alert for a file added to the monitored /tmp/malware directory, confirming the File Integrity Monitoring setup.
+<img width="650" height="auto" alt="file detection" src="https://github.com/user-attachments/assets/59d97cd6-d4a5-484a-9daf-2765e98e2ea3" />
+
