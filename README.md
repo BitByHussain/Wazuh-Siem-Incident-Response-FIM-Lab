@@ -70,3 +70,4 @@ To provide visual evidence and clarity, here are screenshots from the Wazuh mana
   <img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/2fb9d726-7fe4-451b-bb1a-e0ea7e30e86d" />
   <img width="650" height="auto" alt="virus total detection" src="https://github.com/user-attachments/assets/522fa160-f7bf-4663-bc1c-db26a78a0139" />
   </p>
+  
