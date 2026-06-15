@@ -83,7 +83,34 @@ To provide visual evidence and clarity, here are screenshots from the Wazuh mana
 <img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/f7286e07-9d0b-464b-8b94-4e4dddd03315" />
 </p>
 
+## Lessons Learned
+* Centralized Visibility: Gained a practical understanding of client-server architecture, learning how a centralized manager aggregates, parses, and visualizes logs from distributed endpoints.
+
+* Risk Management: Realized that active response requires strict testing and guardrails to ensure automated actions do not accidentally disrupt legitimate business operations or block benign user activity.
+
+* Catching Unauthorized Changes: Learned how establishing a file baseline allows the SIEM to detect real-time modifications, additions, or deletions to critical system files.
+
+* Accelerated Triage: Experienced how automated enrichment dramatically cuts down investigation time for a SOC analyst by instantly adding risk scores and context to an alert.
+
+## Next Steps
+
+* Attack Emulation : Install Atomic Red Team on the agent endpoint to execute scripted cyberattacks mapped to the MITRE ATT&CK matrix, allowing to actively test and validate detection capabilities.
+
+* Network Monitoring Expansion: Deploy an open-source network IDS on the lab network and configure the Wazuh manager to ingest its log files, to correlate network-level anomalies with host-level events.
+
+* Cloud Security Posture Tracking (AWS/Azure): Extend the manager's monitoring boundaries by configuring API-level integrations with a public cloud provider to monitor cloud storage buckets, IAM user modifications, and active configuration changes.
+
+* Regulatory Compliance Reporting: Map current detection rules and custom alert outputs to standard security frameworks (like MITRE ATT&CK, PCI-DSS, or ISO 27001) to simulate real-world compliance auditing and executive SOC reporting.
 
 
+## Conclusion
 
-  
+This project provided a comprehensive look at the modern security monitoring lifecycle, from log ingestion and behavioral detection to automated incident response. Through this lab, I successfully demonstrated:
+
+* System Hardening: Establishing baselines to detect unauthorized file changes.
+
+* Threat Intelligence: Enhancing detection speed by integrating real-time threat data.
+
+* Incident Response: Transitioning from manual monitoring to automated, proactive containment.
+
+By bridging these core pillars of a SOC, I have developed a scalable foundation for threat detection. Moving forward, I am focused on further automating these workflows and increasing my proficiency in incident triage and threat hunting.
