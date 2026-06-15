@@ -80,6 +80,7 @@ To provide visual evidence and clarity, here are screenshots from the Wazuh mana
 <p aligment="center">
 <img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/2fb9d726-7fe4-451b-bb1a-e0ea7e30e86d" />
 <img width="650" height="auto" alt="6969" src="https://github.com/user-attachments/assets/6b7c2d0f-ec13-4923-97a8-9b7e74be1910" />
+<img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/f7286e07-9d0b-464b-8b94-4e4dddd03315" />
 </p>
 
 
