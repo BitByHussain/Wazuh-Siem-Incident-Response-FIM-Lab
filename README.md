@@ -76,10 +76,13 @@ To provide visual evidence and clarity, here are screenshots from the Wazuh mana
       <img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/3b4b1000-7cf4-407c-80ac-85ad1d479652" />
     </P>
 
-
-<p><
+* To validate the automated mitigation workflow, the malicious test file was downloaded on the endpoint, which immediately triggered the Wazuh SIEM to log the alert and execute the Active Response script for automatic threat removal.
+<p aligment="center">
 <img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/2fb9d726-7fe4-451b-bb1a-e0ea7e30e86d" />
+<img width="650" height="auto" alt="6969" src="https://github.com/user-attachments/assets/6b7c2d0f-ec13-4923-97a8-9b7e74be1910" />
 </p>
+
+
 
 
   
