@@ -1,22 +1,22 @@
 # Wazuh-Siem-Automated-Incident-Response-Lab
 Automated Threat Detection, FIM, and Incident Response with Wazuh SIEM on virutal machine highlighting key findings and remadition steps
 
-# Automated Threat Detection, and Incident Response with Wazuh SIEM
+# 🛡️ Automated Threat Detection, and Incident Response with Wazuh SIEM
 
-## Project Overview
+## 🎯 Project Overview
 
 This project involves setting up a Wazuh SIEM lab on virtual machines, deploying a centralized security manager and an endpoint monitoring agent. The goal of this project is to detect unauthorized system changes using File Integrity Monitoring, integrate VirusTotal to catch malicious files, and set up automated scripts to stop attacks immediately.
 
 ----
-## Tools Used
+## 🛠️ Tools Used
 
-* Wazuh SIEM Platform: Centralized security manager and endpoint agent used for log collection, monitoring, and alerting.
-* VirusTotal API: Threat intelligence integration used to automatically cross-reference file hashes and scan for malware.
-* VMware: The virtualization platform (hypervisor) used to host and run the lab environment virtual machines.
-* Bash Shell: Used to create the custom script for automatic file removal on the Linux agent.
+* **Wazuh SIEM Platform:** Centralized security manager and endpoint agent used for log collection, monitoring, and alerting.
+* **VirusTotal API:** Threat intelligence integration used to automatically cross-reference file hashes and scan for malware.
+* **VMware:** The virtualization platform (hypervisor) used to host and run the lab environment virtual machines.
+* **Bash Shell:** Used to create the custom script for automatic file removal on the Linux agent.
 
 ----
-## Project Steps
+## 📋 Project Steps
 
 ### 1. Lab Deployment & Agent Registration:
 * Deployed the Wazuh Server and Wazuh Agent as virtual machines using VMware.
@@ -34,83 +34,77 @@ This project involves setting up a Wazuh SIEM lab on virtual machines, deploying
 * Activated the Active Response capabilities within the Wazuh ecosystem.
 * Implemented a custom script to automatically contain and mitigate threats on the endpoint immediately after a rule triggers.
 ----
-## Key Findings
-* Real-Time Modification Alerts: Every time an unauthorized file change or creation occurred in the monitored directories, the Wazuh Server instantly caught it and generated a high-severity alert.
+## 📌 Key Findings
+* **Real-Time Modification Alerts:** Every time an unauthorized file change or creation occurred in the monitored directories, the Wazuh Server instantly caught it and generated a high-severity alert.
 
-* Automated Malware Detection: When a malicious test file was introduced to the endpoint, the VirusTotal integration successfully extracted its hash, cross-referenced it with global threat data, and automatically flagged it as malware.
+* **Automated Malware Detection:** When a malicious test file was introduced to the endpoint, the VirusTotal integration successfully extracted its hash, cross-referenced it with global threat data, and automatically flagged it as malware.
 
-* Instant Incident Mitigation: Within seconds of the malware detection alert firing, the custom Active Response script triggered automatically on the endpoint. It successfully isolated or removed the threat, proving that the system can contain attacks instantly without waiting for a manual analyst intervention.
+* **Instant Incident Mitigation:** Within seconds of the malware detection alert firing, the custom Active Response script triggered automatically on the endpoint. It successfully isolated or removed the threat, proving that the system can contain attacks instantly without waiting for a manual analyst intervention.
 
 ----
-## Screenshots
-To provide visual evidence and clarity, here are screenshots from the Wazuh manager demonstrating the lab configuration, key results, and detection findings.
+## 🌐 Screenshots
+**To provide visual evidence and clarity, here are screenshots from the Wazuh manager demonstrating the lab configuration, key results, and detection findings.**
 
 
 * Initial Agent Deployment Setup.
-<p aligment="center">
-<img width="650" height="auto" alt="create agent" src="https://github.com/user-attachments/assets/9f95b007-ec6e-4bd1-bb35-2456ca80d53d" />
-<img width="650" height="auto" alt="agent" src="https://github.com/user-attachments/assets/e6a060a6-d1a3-46ff-9763-3f2f34c97291" />
+<p aligment="left">
+<img width="800" height="auto" alt="create agent" src="https://github.com/user-attachments/assets/9f95b007-ec6e-4bd1-bb35-2456ca80d53d" />
+<img width="800" height="auto" alt="agent" src="https://github.com/user-attachments/assets/e6a060a6-d1a3-46ff-9763-3f2f34c97291" />
 </p>
 
 * Configuring File Integrity Monitoring (FIM) on the Wazuh Agent.
-<img width="650" height="auto" alt="file intigrity" src="https://github.com/user-attachments/assets/e0b49cb6-de45-4fbe-818a-9b34cde3e709" />
+
+<img width="800" height="auto" alt="file intigrity" src="https://github.com/user-attachments/assets/e0b49cb6-de45-4fbe-818a-9b34cde3e709" />
 
 * Wazuh event dashboard displaying an alert for a file added to the monitored /tmp/malware directory, confirming the File Integrity Monitoring setup.
-<p aligment="center">
-<img width="650" height="auto" alt="file detection" src="https://github.com/user-attachments/assets/59d97cd6-d4a5-484a-9daf-2765e98e2ea3" />
+<p aligment="left">
+<img width="800" height="auto" alt="file detection" src="https://github.com/user-attachments/assets/59d97cd6-d4a5-484a-9daf-2765e98e2ea3" />
 </p>
 
 * Configuring VirusTotal Integration in the Wazuh Manager.
-  <p aligment="center">
-    <img width="650" height="auto" alt="virus total setup" src="https://github.com/user-attachments/assets/90ddae92-1adf-4a0e-89b1-74674f413bbb" />
-  </p>
+<p aligment="left">
+<img width="800" height="auto" alt="virus total setup" src="https://github.com/user-attachments/assets/90ddae92-1adf-4a0e-89b1-74674f413bbb" />
+</p>
   
 * Simulating a Threat Using the EICAR Test File to Verify VirusTotal Integration
-  <p aligment="center">
-  <img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/2fb9d726-7fe4-451b-bb1a-e0ea7e30e86d" />
-  <img width="650" height="auto" alt="virus total detection" src="https://github.com/user-attachments/assets/522fa160-f7bf-4663-bc1c-db26a78a0139" />
-  </p>
-
-  * Configuring the Custom Active Response Script for Automated Mitigation
-    <P aligment="center">
-      <img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/3b4b1000-7cf4-407c-80ac-85ad1d479652" />
-    </P>
-
-* To validate the automated mitigation workflow, the malicious test file was downloaded on the endpoint, which immediately triggered the Wazuh SIEM to log the alert and execute the Active Response script for automatic threat removal.
-<p aligment="center">
-<img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/2fb9d726-7fe4-451b-bb1a-e0ea7e30e86d" />
-<img width="650" height="auto" alt="6969" src="https://github.com/user-attachments/assets/6b7c2d0f-ec13-4923-97a8-9b7e74be1910" />
-<img width="650" height="auto" alt="image" src="https://github.com/user-attachments/assets/f7286e07-9d0b-464b-8b94-4e4dddd03315" />
+<p aligment="left">
+<img width="800" height="auto" alt="image" src="https://github.com/user-attachments/assets/2fb9d726-7fe4-451b-bb1a-e0ea7e30e86d" />
+<img width="800" height="auto" alt="virus total detection" src="https://github.com/user-attachments/assets/522fa160-f7bf-4663-bc1c-db26a78a0139" />
 </p>
 
-## Lessons Learned
-* Centralized Visibility: Gained a practical understanding of client-server architecture, learning how a centralized manager aggregates, parses, and visualizes logs from distributed endpoints.
+* Configuring the Custom Active Response Script for Automated Mitigation
+<P aligment="left">
+<img width="800" height="auto" alt="image" src="https://github.com/user-attachments/assets/3b4b1000-7cf4-407c-80ac-85ad1d479652" />
+</P>
 
-* Risk Management: Realized that active response requires strict testing and guardrails to ensure automated actions do not accidentally disrupt legitimate business operations or block benign user activity.
+* To validate the automated mitigation workflow, the malicious test file was downloaded on the endpoint, which immediately triggered the Wazuh SIEM to log the alert and execute the Active Response script for automatic threat removal.
+<p aligment="left">
+<img width="800" height="auto" alt="image" src="https://github.com/user-attachments/assets/2fb9d726-7fe4-451b-bb1a-e0ea7e30e86d" />
+<img width="800" height="auto" alt="6969" src="https://github.com/user-attachments/assets/6b7c2d0f-ec13-4923-97a8-9b7e74be1910" />
+<img width="800" height="auto" alt="image" src="https://github.com/user-attachments/assets/f7286e07-9d0b-464b-8b94-4e4dddd03315" />
+</p>
 
-* Catching Unauthorized Changes: Learned how establishing a file baseline allows the SIEM to detect real-time modifications, additions, or deletions to critical system files.
+---
 
-* Accelerated Triage: Experienced how automated enrichment dramatically cuts down investigation time for a SOC analyst by instantly adding risk scores and context to an alert.
+## 📝 Lessons Learned
+* **Centralized Visibility:** Gained a practical understanding of client-server architecture, learning how a centralized manager aggregates, parses, and visualizes logs from distributed endpoints.
 
-## Next Steps
+* **Risk Management:** Realized that active response requires strict testing and guardrails to ensure automated actions do not accidentally disrupt legitimate business operations or block benign user activity.
 
-* Attack Emulation : Install Atomic Red Team on the agent endpoint to execute scripted cyberattacks mapped to the MITRE ATT&CK matrix, allowing to actively test and validate detection capabilities.
+* **Catching Unauthorized Changes**: Learned how establishing a file baseline allows the SIEM to detect real-time modifications, additions, or deletions to critical system files.
 
-* Network Monitoring Expansion: Deploy an open-source network IDS on the lab network and configure the Wazuh manager to ingest its log files, to correlate network-level anomalies with host-level events.
+* **Accelerated Triage:** Experienced how automated enrichment dramatically cuts down investigation time for a SOC analyst by instantly adding risk scores and context to an alert.
 
-* Cloud Security Posture Tracking (AWS/Azure): Extend the manager's monitoring boundaries by configuring API-level integrations with a public cloud provider to monitor cloud storage buckets, IAM user modifications, and active configuration changes.
+---
 
-* Regulatory Compliance Reporting: Map current detection rules and custom alert outputs to standard security frameworks (like MITRE ATT&CK, PCI-DSS, or ISO 27001) to simulate real-world compliance auditing and executive SOC reporting.
+## ⏭️ Next Steps
+
+* **Attack Emulation:** Install Atomic Red Team on the agent endpoint to execute scripted cyberattacks mapped to the MITRE ATT&CK matrix, allowing to actively test and validate detection capabilities.
+
+* **Network Monitoring Expansion:** Deploy an open-source network IDS on the lab network and configure the Wazuh manager to ingest its log files, to correlate network-level anomalies with host-level events.
+
+* **Cloud Security Posture Tracking (AWS/Azure):** Extend the manager's monitoring boundaries by configuring API-level integrations with a public cloud provider to monitor cloud storage buckets, IAM user modifications, and active configuration changes.
+
+* **Regulatory Compliance Reporting:** Map current detection rules and custom alert outputs to standard security frameworks (like MITRE ATT&CK, PCI-DSS, or ISO 27001) to simulate real-world compliance auditing and executive SOC reporting.
 
 
-## Conclusion
-
-This project provided a comprehensive look at the modern security monitoring lifecycle, from log ingestion and behavioral detection to automated incident response. Through this lab, I successfully demonstrated:
-
-* System Hardening: Establishing baselines to detect unauthorized file changes.
-
-* Threat Intelligence: Enhancing detection speed by integrating real-time threat data.
-
-* Incident Response: Transitioning from manual monitoring to automated, proactive containment.
-
-By bridging these core pillars of a SOC, I have developed a scalable foundation for threat detection. Moving forward, I am focused on further automating these workflows and increasing my proficiency in incident triage and threat hunting.
