@@ -7,6 +7,37 @@ Automated Threat Detection, FIM, and Incident Response with Wazuh SIEM on viruta
 
 This project involves setting up a Wazuh SIEM lab on virtual machines, deploying a centralized security manager and an endpoint monitoring agent. The goal of this project is to detect unauthorized system changes using File Integrity Monitoring, integrate VirusTotal to catch malicious files, and set up automated scripts to stop attacks immediately.
 
+---
+
+## 🌐 Network Diagram
+
+```text
+[ External Cloud ] 
+        |
+   (API Queries)
+        |
+        v
++--------------------------+          (Port 443)        +-------------------+
+|  VirusTotal API          | <------------------------- | Security Analyst  |
++--------------------------+                            +-------------------+
+        ^       | 
+  Hash  |       | Threat Score
+        |       v
++-------------------------------------------------+
+|  Wazuh Manager & Dashboard (Ubuntu Server)      |
+|  - Log Analysis Engine & Rule Matching          |
+|  - Active Response Commander                    |
++-------------------------------------------------+
+        ^                        |
+        | (FIM Logs)             | (Trigger Response Script)
+        |                        v
++-------------------------------------------------+
+|  Wazuh Agents (Linux Endpoints)                 |
+|  - Real-Time File Integrity Monitoring (FIM)    |
+|  - Local Active Response Execution              |
++-------------------------------------------------+
+```
+
 ----
 ## 🛠️ Tools Used
 
@@ -42,7 +73,7 @@ This project involves setting up a Wazuh SIEM lab on virtual machines, deploying
 * **Instant Incident Mitigation:** Within seconds of the malware detection alert firing, the custom Active Response script triggered automatically on the endpoint. It successfully isolated or removed the threat, proving that the system can contain attacks instantly without waiting for a manual analyst intervention.
 
 ----
-## 🌐 Screenshots
+## 💻 Screenshots
 **To provide visual evidence and clarity, here are screenshots from the Wazuh manager demonstrating the lab configuration, key results, and detection findings.**
 
 
